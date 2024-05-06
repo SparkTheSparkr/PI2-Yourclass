@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourCLass</title>
+    <title>YourClass</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -55,11 +55,11 @@
                   Cursos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Culinária</a></li>
-                  <li><a class="dropdown-item" href="#">Fotografia</a></li>
-                  <li><a class="dropdown-item" href="#">Música</a></li>
+                  <li><a class="dropdown-item" href="cursos/culinaria.html">Culinária</a></li>
+                  <li><a class="dropdown-item" href="cursos/fotografia.html">Fotografia</a></li>
+                  <li><a class="dropdown-item" href="cursos/musica.html">Música</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Mais cursos</a></li>
+                  <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
                 </ul>
               </li>
             </ul>
@@ -79,6 +79,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
+            <a href="cursos/programacao.html">
             <div class="carousel-item active">
               <img src="../assets/images/index/programacao.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
@@ -86,20 +87,25 @@
                 <p>Aprenda a desenvolver sistemas em nossos cursos</p>
               </div>
             </div>
+          </a>
             <div class="carousel-item">
+              <a href="cursos/musica.html">
               <img src="../assets/images/index/musica.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Música</h5>
                 <p>Descubra os segredos da teoria musical e dos instrumentos!</p>
               </div>
             </div>
+          </a>
             <div class="carousel-item">
+              <a href="cursos/culinaria.html">
               <img src="../assets/images/index/culinaria.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Culinária</h5>
                 <p>Cozinhe como ninguém!</p>
               </div>
             </div>
+          </a>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -110,39 +116,53 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-     
+     <a name ="cursos">
         <div class="row d-flex justify-content-center">
           <h1 class="d-flex justify-content-center mt-5 mb-5">
             Que tal dar uma olhada em alguns dos nossos cursos?
           </h1>
+
           <div class="row d-flex justify-content-center">
           <div class ="col-md-4 col-centered d-flex justify-content-center">
+            <a href="cursos/administracao.html">
              <img src="../assets/images/index/adCursoAdm.png">
+            </a>
           </div>
           
           <div class ="col-md-4 col-centered d-flex justify-content-center">
-             <img src="../assets/images/index/adCursoMus.png">
+            <a href="cursos/musica.html">
+              <img src="../assets/images/index/adCursoMus.png">
+            </a>
           </div>
-          
+
           <div class ="col-md-4 col-centered d-flex justify-content-center">
+            <a href ="cursos/programacao.html">
              <img src="../assets/images/index/adCursoProg.png">
+            </a>
           </div>
+
         </div>
         <div class="row d-flex justify-content-center mt-5">
           <div class ="col-md-4 col-centered d-flex justify-content-center">
+            <a href="cursos/culinaria.html">
             <img src="../assets/images/index/adCursoCulin.png">
+          </a>
          </div>
 
          <div class ="col-md-4 col-centered d-flex justify-content-center">
+          <a href="cursos/fotografia.html">
           <img src="../assets/images/index/adCursoFoto.png">
+        </a>
          </div>
 
          <div class ="col-md-4 col-centered d-flex justify-content-center">
+          <a href="cursos/logistica.html">
           <img src="../assets/images/index/adCursoLog.png">
+        </a>
          </div>
         </div>
       </div>
-
+    </a>
     </body>
 
 </html>
