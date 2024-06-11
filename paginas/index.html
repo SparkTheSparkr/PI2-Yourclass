@@ -1,168 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourClass</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>your class</title>
+    <!-- Estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
     <style>
-.carousel-inner {
-  height: 0;
-  padding-bottom: 35%; /* this sets carousel aspect ratio (4:1 here) */
-}
+        body {
+            background-color: #000000; /* Fundo escuro */
+            color: #ffffff; /* Texto branco */
+        }
 
-.carousel-item {
-  position: absolute !important; /* Bootstrap is insistent */
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+        .curso-container {
+            margin-top: 65px; /* Espaçamento entre a navbar e o conteúdo */
+        }
 
-.carousel-item img {
-  height: 100%; /* Bootstrap handles width already */
-  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
-}
+        .curso {
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .curso img {
+            width: 50%; /* Imagem ocupa toda a largura da div */
+            height: 50%; /* Altura ajusta automaticamente */
+            border: 1px solid #40e0d0; /* Borda azul turquesa neon */
+            border-radius: 5px; /* Borda arredondada */
+            margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+        }
+
+        .curso h4 {
+            color: #40e0d0; /* Cor do título azul turquesa neon */
+        }
+
+        .curso p {
+            color: #a0a0a0; /* Cor do texto cinza claro */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* Cor dos links da navbar branca */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important; /* Cor do nome da marca branca */
+        }
+
+        .btn-primary {
+            background-color: #40e0d0; /* Azul turquesa neon */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #39ff14; /* Verde neon */
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active, 
+        .navbar-dark .navbar-nav .nav-link:focus, 
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #40e0d0 !important; /* Cor azul turquesa neon para link ativo, focado ou hover */
+        }
+        
+        .bg-custom {
+            background-color: #000000; /* preto nav bar*/
+        }
     </style>
-  </head>
+</head>
 <body>
 
-  <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">YourClass</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Your Class</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nós</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Perfil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Placar</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                  Cursos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="cursos/culinaria.html">Culinária</a></li>
-                  <li><a class="dropdown-item" href="cursos/fotografia.html">Fotografia</a></li>
-                  <li><a class="dropdown-item" href="cursos/musica.html">Música</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
-                </ul>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                </li>
+                
+                     <a class="nav-link" href="site teste24/curso.html">Curso</a>
+                </li>
             </ul>
-            <li class="nav-item d-flex">
-              <a class="nav-link" href="cadastro.php" style="color: white;">Cadastre ou <br> Entre</a>
-            </li>
-          </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+            </form>
         </div>
-      </nav>
-    </button>
-        <!-- Fim NavBar -->
+    </div>
+</nav>
 
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <a href="cursos/programacao.html">
-            <div class="carousel-item active">
-              <img src="../assets/images/index/programacao.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Programação</h5>
-                <p>Aprenda a desenvolver sistemas em nossos cursos</p>
-              </div>
+<!-- Introdução -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="display-4 text-center">Bem-vindo ao Site Your Class</h4>
+            <p class="lead text-center">Explore uma variedade de cursos online nas áreas de Violão, Culinária, Programação e Administração. Aprenda novas habilidades e melhore seu conhecimento com nossos cursos especializados.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container curso-container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="curso">
+                <img src="img/culinaria.jpeg" alt="Curso de Culinária">
+                <h4>Culinária</h4>
+                <p>Descubra novas receitas e técnicas de culinária deliciosas.</p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div> 
+        
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="curso">
+                <img src="img/musica.jpeg" alt="Curso de Violão">
+                <h4>Curso de Violão</h4>
+                <p>Aprenda a tocar violão desde iniciantes até avançados.</p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
             </div>
-          </a>
-            <div class="carousel-item">
-              <a href="cursos/musica.html">
-              <img src="../assets/images/index/musica.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Música</h5>
-                <p>Descubra os segredos da teoria musical e dos instrumentos!</p>
-              </div>
+        </div>
+        
+
+        <div class="col-md-4 mb-4">
+            <div class="curso">
+                <img src="img/programacao.jpeg" alt="Programacão">
+                <h4>Programação</h4>
+                <p><!--coloque o texto do curso--></p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
             </div>
-          </a>
-            <div class="carousel-item">
-              <a href="cursos/culinaria.html">
-              <img src="../assets/images/index/culinaria.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Culinária</h5>
-                <p>Cozinhe como ninguém!</p>
-              </div>
+    
+         </div>
+          <div class="col-md-4 mb-4">
+            <div class="curso">
+                <img src="img/images.jfif" alt="Fotografia">
+                <h4>Footgrafia</h4>
+                <p><!--coloque o texto do curso--></p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+               </div>
+
+               <div class="col-md-4 mb-4">
+            <div class="curso">
+                <img src="img/download.jfif" alt="adiministracão">
+                <h4>Adiministracão</h4>
+                <p><!--coloque o texto do curso--> </p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
             </div>
-          </a>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-     <a name ="cursos">
-        <div class="row d-flex justify-content-center">
-          <h1 class="d-flex justify-content-center mt-5 mb-5">
-            Que tal dar uma olhada em alguns dos nossos cursos?
-          </h1>
-
-          <div class="row d-flex justify-content-center">
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/administracao.html">
-             <img src="../assets/images/index/adCursoAdm.png">
-            </a>
-          </div>
-          
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/musica.html">
-              <img src="../assets/images/index/adCursoMus.png">
-            </a>
-          </div>
-
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href ="cursos/programacao.html">
-             <img src="../assets/images/index/adCursoProg.png">
-            </a>
-          </div>
-
-        </div>
-        <div class="row d-flex justify-content-center mt-5">
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/culinaria.html">
-            <img src="../assets/images/index/adCursoCulin.png">
-          </a>
          </div>
+        <!-- Adicione mais col-md-4 conforme necessário para mais cursos -->
+    </div>
+</div>
 
-         <div class ="col-md-4 col-centered d-flex justify-content-center">
-          <a href="cursos/fotografia.html">
-          <img src="../assets/images/index/adCursoFoto.png">
-        </a>
-         </div>
+<!-- JavaScript e dependências do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 
-         <div class ="col-md-4 col-centered d-flex justify-content-center">
-          <a href="cursos/logistica.html">
-          <img src="../assets/images/index/adCursoLog.png">
-        </a>
-         </div>
-        </div>
-      </div>
-    </a>
-    </body>
-
+</body>
 </html>
