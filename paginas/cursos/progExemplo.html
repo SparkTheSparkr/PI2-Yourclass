@@ -46,7 +46,10 @@
             border-radius: 8px;
             margin-top: 40px;
         }
-
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
         body{
             background-image: url("../../assets/images/programacao/bgProgamacao.jpg");
             background-repeat: no-repeat;
@@ -59,20 +62,20 @@
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">YourClass</a>
+      <a class="navbar-brand" href="../index.html">YourClass</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre nós</a>
+            <a class="nav-link" href="../sobrenos.html">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Perfil</a>
+            <a class="nav-link" href="../usuarios/aluno.html">Perfil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Placar</a>
@@ -86,7 +89,7 @@
               <li><a class="dropdown-item" href="cursos/fotografia.html">Fotografia</a></li>
               <li><a class="dropdown-item" href="cursos/musica.html">Música</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
+              <li><a class="dropdown-item" href="../index.html#cursos">Mais cursos</a></li>
             </ul>
           </li>
         </ul>
@@ -106,7 +109,9 @@
           <h1 class="card-title">Python para Iniciantes</h1>
           <span class="course-price">R$ 299,99</span>
         </div>
-        <p class="course-category">Categoria: Programação</p>
+        <a href="../categorias/programacao.html"><p class="course-category">Categoria: Programação</p></a>
+        <p>Total de aluno: 150</p>
+        <p>Nota do curso: 4,7</p>
         <div class="course-info">
           <h3>Descrição do Curso</h3>
           <p>Este curso é destinado a quem deseja iniciar na programação utilizando a linguagem Python. 
@@ -128,7 +133,7 @@
         </div>
         <div class="professor-info">
           <h3>Sobre o Professor</h3>
-          <p><strong>Prof. João Silva</strong></p>
+          <a href="../usuarios/professor.html" id="prof"><p><strong>Prof. João Silva</strong></p></a>
           <p>João Silva é um experiente desenvolvedor de software com mais de 15 anos de atuação na área de tecnologia. 
           Formado em Ciência da Computação pela Universidade Federal de São Paulo, João já trabalhou em grandes empresas de tecnologia e startups, 
           desenvolvendo desde aplicativos móveis até sistemas de grande escala para o mercado financeiro. 
