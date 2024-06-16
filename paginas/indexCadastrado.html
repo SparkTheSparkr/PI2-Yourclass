@@ -42,32 +42,32 @@
   <!-- NavBar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">YourClass</a>
+          <a class="navbar-brand" href="index.html">YourClass</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nós</a>
+                <a class="nav-link" href="sobrenos.html">Sobre nós</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Perfil</a>
+                <a class="nav-link" href="usuarios/aluno.html">Perfil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Placar</a>
+                <a class="nav-link" href="placar.html">Placar</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                   Cursos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="cursos/culinaria.html">Culinária</a></li>
-                  <li><a class="dropdown-item" href="cursos/fotografia.html">Fotografia</a></li>
-                  <li><a class="dropdown-item" href="cursos/musica.html">Música</a></li>
+                  <li><a class="dropdown-item" href="categorias/culinaria.html">Culinária</a></li>
+                  <li><a class="dropdown-item" href="categorias/fotografia.html">Fotografia</a></li>
+                  <li><a class="dropdown-item" href="categorias/musica.html">Música</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
                 </ul>
@@ -89,7 +89,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
-            <a href="cursos/programacao.html">
+            <a href="categorias/programacao.html">
             <div class="carousel-item active">
               <img src="../assets/images/index/programacao.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
@@ -99,7 +99,7 @@
             </div>
           </a>
             <div class="carousel-item">
-              <a href="cursos/musica.html">
+              <a href="categorias/musica.html">
               <img src="../assets/images/index/musica.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Música</h5>
@@ -108,7 +108,7 @@
             </div>
           </a>
             <div class="carousel-item">
-              <a href="cursos/culinaria.html">
+              <a href="categorias/culinaria.html">
               <img src="../assets/images/index/culinaria.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Culinária</h5>
@@ -126,64 +126,150 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-     <a name ="cursos">
-        <div class="row d-flex justify-content-center">
-          <h1 class="d-flex justify-content-center mt-5 mb-5">
-            Que tal dar uma olhada em alguns dos nossos cursos?
-          </h1>
-
-          <div class="row d-flex justify-content-center">
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/administracao.html">
-             <img src="../assets/images/index/adCursoAdm.png">
-            </a>
+   <!-- Exemplos de Curso -->
+   <div class="container mt-5 custom-container">
+    <h2 class="text-center">Explore alguns dos nossos cursos mais vendidos</h2>
+    <div class="row mt-4 row-spacing">
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/fotoBasica.jpg" class="card-img-top" alt="Fotografia 1">
+          <div class="card-body">
+            <h5 class="card-title">Fotografia Básica</h5>
+            <p class="card-text">Comece sua jornada na fotografia aprendendo o básico.</p>
+            <a href="categorias/fotografia.html" class="btn btn-primary">Ver curso</a>
           </div>
-          
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/musica.html">
-              <img src="../assets/images/index/adCursoMus.png">
-            </a>
-          </div>
-
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href ="cursos/programacao.html">
-             <img src="../assets/images/index/adCursoProg.png">
-            </a>
-          </div>
-        </div>
-
-        <div class="row d-flex justify-content-center">
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Administração</p></div>
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Música</p></div>
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Programação</p></div>
-        </div>
-        
-        <div class="row d-flex justify-content-center mt-5">
-          <div class ="col-md-4 col-centered d-flex justify-content-center">
-            <a href="cursos/culinaria.html">
-            <img src="../assets/images/index/adCursoCulin.png">
-          </a>
-         </div>
-
-         <div class ="col-md-4 col-centered d-flex justify-content-center">
-          <a href="cursos/fotografia.html">
-          <img src="../assets/images/index/adCursoFoto.png">
-        </a>
-         </div>
-
-         <div class ="col-md-4 col-centered d-flex justify-content-center">
-          <a href="cursos/logistica.html">
-          <img src="../assets/images/index/adCursoLog.png">
-        </a>
-         </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Culinária</p></div>
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Fotografia</p></div>
-            <div class ="col-md-4 col-centered d-flex justify-content-center"><p>Logística</p></div>
         </div>
       </div>
-    </a>
-    </body>
-
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/admPublica.jpg" class="card-img-top" alt="Administração 2">
+          <div class="card-body">
+            <h5 class="card-title">Administração Pública</h5>
+            <p class="card-text">Explore os princípios da administração no setor público.</p>
+            <a href="categorias/administracao.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/IntroProd.jpg" class="card-img-top" alt="Programação 1">
+          <div class="card-body">
+            <h5 class="card-title">Introdução à Programação</h5>
+            <p class="card-text">Aprenda os fundamentos da programação com este curso introdutório.</p>
+            <a href="categorias/programacao.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/logECadeia.jpg" class="card-img-top" alt="Logística 1">
+          <div class="card-body">
+            <h5 class="card-title">Logística e Cadeia de Suprimentos</h5>
+            <p class="card-text">Domine a logística e a gestão da cadeia de suprimentos.</p>
+            <a href="categorias/logistica.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/admEmpresas.jpg" class="card-img-top" alt="Administração 1">
+          <div class="card-body">
+            <h5 class="card-title">Administração de Empresas</h5>
+            <p class="card-text">Aprenda a gerenciar empresas de maneira eficaz.</p>
+            <a href="categorias/administracao.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/fotoAvancada.jpg" class="card-img-top" alt="Fotografia 2">
+          <div class="card-body">
+            <h5 class="card-title">Fotografia Avançada</h5>
+            <p class="card-text">Aprimore suas habilidades com técnicas avançadas de fotografia.</p>
+            <a href="categorias/fotografia.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/culinariaBasica.jpg" class="card-img-top" alt="Culinária 1">
+          <div class="card-body">
+            <h5 class="card-title">Culinária Básica</h5>
+            <p class="card-text">Aprenda técnicas básicas de culinária para iniciantes.</p>
+            <a href="categorias/culinaria.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="../assets/images/index/musicaBasica.jpg" class="card-img-top" alt="Música 1">
+          <div class="card-body">
+            <h5 class="card-title">Música para Iniciantes</h5>
+            <p class="card-text">Descubra os fundamentos da teoria musical.</p>
+            <a href="categorias/musica.html" class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Categorias -->
+        <a name="cursos">
+          <div class="row d-flex justify-content-center">
+            <h1 class="d-flex justify-content-center mt-5 mb-5">
+              Não encontrou o que queria? Busque pelas categorias!
+            </h1>
+  
+            <div class="row d-flex justify-content-center">
+            <div class="col-md-4 col-centered d-flex justify-content-center">
+              <a href="categorias/administracao.html">
+               <img src="../assets/images/index/adCursoAdm.png">
+              </a>
+            </div>
+            
+            <div class="col-md-4 col-centered d-flex justify-content-center">
+              <a href="categorias/musica.html">
+                <img src="../assets/images/index/adCursoMus.png">
+              </a>
+            </div>
+  
+            <div class="col-md-4 col-centered d-flex justify-content-center">
+              <a href="categorias/programacao.html">
+               <img src="../assets/images/index/adCursoProg.png">
+              </a>
+            </div>
+          </div>
+  
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Administração</p></div>
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Música</p></div>
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Programação</p></div>
+          </div>
+          
+          <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-4 col-centered d-flex justify-content-center">
+              <a href="categorias/culinaria.html">
+              <img src="../assets/images/index/adCursoCulin.png">
+            </a>
+           </div>
+  
+           <div class="col-md-4 col-centered d-flex justify-content-center">
+            <a href="categorias/fotografia.html">
+            <img src="../assets/images/index/adCursoFoto.png">
+          </a>
+           </div>
+  
+           <div class="col-md-4 col-centered d-flex justify-content-center">
+            <a href="categorias/logistica.html">
+            <img src="../assets/images/index/adCursoLog.png">
+          </a>
+           </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Culinária</p></div>
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Fotografia</p></div>
+              <div class="col-md-4 col-centered d-flex justify-content-center"><p>Logística</p></div>
+          </div>
+        </div>
+</body>
+</html>
 </html>

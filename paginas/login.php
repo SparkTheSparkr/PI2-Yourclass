@@ -3,31 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - YourClass</title>
+    <title>Login - YourClass</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        .corpo {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-            padding-top: 60px;
-        }
-        .container {
-            max-width: 800px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .btn-cadastrar {
-            background-color: #28a745;
-            border: none;
-        }
-        .btn-cadastrar:hover {
-            background-color: #218838;
-        }
-    </style>
 </head>
 <body>
+
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -62,38 +42,29 @@
                         </ul>
                     </li>
                 </ul>
+                <a class="btn btn-light" href="cadastro.php">Cadastre-se</a>
             </div>
         </div>
     </nav>
     <!-- Fim NavBar -->
 
     <!-- Conteúdo da Página -->
-    <div class="corpo">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Cadastro</h2>
-                    <form action="../processar_cadastro.php" method="post">
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="senha">Senha</label>
-                            <input type="password" class="form-control" id="senha" name="senha" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" required>
-                        </div>
-                        <button type="submit" class="btn btn-cadastrar btn-block">Cadastrar</button>
-                    </form>
-                    <p class="mt-3 text-center">Já tem uma conta? <a href="login.php">Faça login aqui</a>.</p>
-                </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2 class="mb-4">Login</h2>
+                <form action="processar_login.php" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <p class="mt-3">Não tem uma conta? <a href="cadastro.php">Crie uma agora</a>.</p>
             </div>
         </div>
     </div>
