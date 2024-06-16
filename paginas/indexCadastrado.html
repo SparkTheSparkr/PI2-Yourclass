@@ -12,7 +12,6 @@
   height: 0;
   padding-bottom: 35%; /* this sets carousel aspect ratio (4:1 here) */
 }
-
 .carousel-item {
   position: absolute !important; /* Bootstrap is insistent */
   top: 0;
@@ -20,10 +19,21 @@
   bottom: 0;
   left: 0;
 }
-
 .carousel-item img {
   height: 100%; /* Bootstrap handles width already */
   object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+.circulo{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.circulo img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
     </style>
   </head>
@@ -64,7 +74,7 @@
               </li>
             </ul>
             <li class="nav-item d-flex">
-              <a class="nav-link" href="cadastro.php" style="color: white;">Cadastre ou <br> Entre</a>
+              <a class="nav-link" href="usuarios/aluno.html"><div class="circulo"><img src="../assets/images/index/default.jpg" ></div></a>
             </li>
           </div>
         </div>
