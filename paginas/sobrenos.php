@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+// Verifica se o usuário está logado
+$loggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'];
+
+// Função para exibir o botão de login ou logout
+function renderLoginButton($loggedIn) {
+    if ($loggedIn) {
+        echo '<div class="nav-item d-flex me-2">
+        <a class="nav-link" href="usuarios/aluno.php">
+          <div class="circulo"><img src="../../assets/images/index/default.jpg"></div>
+        </a>
+      </div>
+      <!-- Botão de login/sair -->
+      <div class="nav-item d-flex ">
+        <a class="btn btn-light me-2" href="../logout.php">Sair</a>
+      </div>';
+    } else {
+        echo '<a class="btn btn-light me-2" href="login.php">Cadastre-se ou Entre</a>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,46 +94,68 @@
             font-size: 0.9em;
             color: #6c757d;
         }
+        .perfil{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.perfil img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.circulo{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.circulo img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
     </style>
 </head>
 <body>
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">YourClass</a>
+      <a class="navbar-brand" href="index.php">YourClass</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobrenos.html">Sobre nós</a>
+            <a class="nav-link" href="sobrenos.php">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Perfil</a>
+            <a class="nav-link" href="usuarios/aluno.php">Perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Placar</a>
+            <a class="nav-link" href="placar.php">Placar</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               Cursos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="categorias/culinaria.html">Culinária</a></li>
-              <li><a class="dropdown-item" href="categorias/fotografia.html">Fotografia</a></li>
-              <li><a class="dropdown-item" href="categorias/musica.html">Música</a></li>
+              <li><a class="dropdown-item" href="categorias/culinaria.php">Culinária</a></li>
+              <li><a class="dropdown-item" href="categorias/fotografia.php">Fotografia</a></li>
+              <li><a class="dropdown-item" href="categorias/musica.php">Música</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="index.html#cursos">Mais cursos</a></li>
+              <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
             </ul>
           </li>
         </ul>
-        <li class="nav-item d-flex">
-          <a class="btn btn-light" href="login.php">Cadastre-se ou Entre</a>
-        </li>
+        <?php renderLoginButton($loggedIn); ?>
       </div>
     </div>
   </nav>

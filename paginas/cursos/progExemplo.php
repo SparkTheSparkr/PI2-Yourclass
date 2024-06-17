@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+// Verifica se o usuário está logado
+$loggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'];
+
+// Função para exibir o botão de login ou logout
+function renderLoginButton($loggedIn) {
+    if ($loggedIn) {
+        echo '<div class="nav-item d-flex me-2">
+        <a class="nav-link" href="usuarios/aluno.php">
+          <div class="circulo"><img src="../../assets/images/index/default.jpg"></div>
+        </a>
+      </div>
+      <!-- Botão de login/sair -->
+      <div class="nav-item d-flex ">
+        <a class="btn btn-light me-2" href="../../logout.php">Sair</a>
+      </div>';
+    } else {
+        echo '<a class="btn btn-light me-2" href="../login.php">Cadastre-se ou Entre</a>';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +79,30 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .perfil{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.perfil img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.circulo{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.circulo img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
     </style>
 </head>
 <body>
@@ -62,43 +110,42 @@
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">YourClass</a>
+      <a class="navbar-brand" href="../index.php">YourClass</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../sobrenos.html">Sobre nós</a>
+            <a class="nav-link" href="../sobrenos.php">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../usuarios/aluno.html">Perfil</a>
+            <a class="nav-link" href="../usuarios/aluno.php">Perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Placar</a>
+            <a class="nav-link" href="../placar.php">Placar</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               Cursos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="cursos/culinaria.html">Culinária</a></li>
-              <li><a class="dropdown-item" href="cursos/fotografia.html">Fotografia</a></li>
-              <li><a class="dropdown-item" href="cursos/musica.html">Música</a></li>
+              <li><a class="dropdown-item" href="../categorias/culinaria.php">Culinária</a></li>
+              <li><a class="dropdown-item" href="../categorias/fotografia.php">Fotografia</a></li>
+              <li><a class="dropdown-item" href="../categorias/musica.php">Música</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../index.html#cursos">Mais cursos</a></li>
+              <li><a class="dropdown-item" href="../index.php#cursos">Mais cursos</a></li>
             </ul>
           </li>
         </ul>
-        <li class="nav-item d-flex">
-          <a class="btn btn-light" href="../login.php">Cadastre-se ou Entre</a>
-        </li>
+        <?php renderLoginButton($loggedIn); ?>
       </div>
     </div>
   </nav>
+    <!-- Fim NavBar -->
 
   <!-- Course Details -->
   <div class="container mt-5 custom-container">
@@ -109,7 +156,7 @@
           <h1 class="card-title">Python para Iniciantes</h1>
           <span class="course-price">R$ 299,99</span>
         </div>
-        <a href="../categorias/programacao.html"><p class="course-category">Categoria: Programação</p></a>
+        <a href="../categorias/programacao.php"><p class="course-category">Categoria: Programação</p></a>
         <p>Total de aluno: 150</p>
         <p>Nota do curso: 4,7</p>
         <div class="course-info">
@@ -133,7 +180,7 @@
         </div>
         <div class="professor-info">
           <h3>Sobre o Professor</h3>
-          <a href="../usuarios/professor.html" id="prof"><p><strong>Prof. João Silva</strong></p></a>
+          <a href="../usuarios/professor.php" id="prof"><p><strong>Prof. João Silva</strong></p></a>
           <p>João Silva é um experiente desenvolvedor de software com mais de 15 anos de atuação na área de tecnologia. 
           Formado em Ciência da Computação pela Universidade Federal de São Paulo, João já trabalhou em grandes empresas de tecnologia e startups, 
           desenvolvendo desde aplicativos móveis até sistemas de grande escala para o mercado financeiro. 
@@ -141,7 +188,7 @@
           Atualmente, João se dedica a ministrar cursos de programação e a compartilhar seu conhecimento através de palestras e workshops em eventos de tecnologia.
           </p>
         </div>
-        <a href="progExemploComprar.html" class="btn btn-primary mt-3">Comprar Curso</a>
+        <a href="comprarProg.php" class="btn btn-primary mt-3">Comprar Curso</a>
       </div>
     </div>
 
@@ -155,7 +202,7 @@
             <div class="card-body">
               <h5 class="card-title">Curso Relacionado 1</h5>
               <p class="card-text">Descrição breve do curso relacionado 1.</p>
-              <a href="curso_relacionado_1.html" class="btn btn-primary">Ver Curso</a>
+              <a href="curso_relacionado_1.php" class="btn btn-primary">Ver Curso</a>
             </div>
           </div>
         </div>
@@ -165,7 +212,7 @@
             <div class="card-body">
               <h5 class="card-title">Curso Relacionado 2</h5>
               <p class="card-text">Descrição breve do curso relacionado 2.</p>
-              <a href="curso_relacionado_2.html" class="btn btn-primary">Ver Curso</a>
+              <a href="curso_relacionado_2.php" class="btn btn-primary">Ver Curso</a>
             </div>
           </div>
         </div>
@@ -175,7 +222,7 @@
             <div class="card-body">
               <h5 class="card-title">Curso Relacionado 3</h5>
               <p class="card-text">Descrição breve do curso relacionado 3.</p>
-              <a href="curso_relacionado_3.html" class="btn btn-primary">Ver Curso</a>
+              <a href="curso_relacionado_3.php" class="btn btn-primary">Ver Curso</a>
             </div>
           </div>
         </div>

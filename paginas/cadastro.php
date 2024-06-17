@@ -25,38 +25,62 @@
         .btn-cadastrar:hover {
             background-color: #218838;
         }
+        .perfil{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.perfil img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.circulo{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.circulo img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
     </style>
 </head>
 <body>
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">YourClass</a>
+            <a class="navbar-brand" href="index.php">YourClass</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sobrenos.html">Sobre nós</a>
+                        <a class="nav-link" href="sobrenos.php">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="usuarios/aluno.html">Perfil</a>
+                        <a class="nav-link" href="usuarios/aluno.php">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="placar.html">Placar</a>
+                        <a class="nav-link" href="placar.php">Placar</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                             Cursos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="categorias/culinaria.html">Culinária</a></li>
-                            <li><a class="dropdown-item" href="categorias/fotografia.html">Fotografia</a></li>
-                            <li><a class="dropdown-item" href="categorias/musica.html">Música</a></li>
+                            <li><a class="dropdown-item" href="categorias/culinaria.php">Culinária</a></li>
+                            <li><a class="dropdown-item" href="categorias/fotografia.php">Fotografia</a></li>
+                            <li><a class="dropdown-item" href="categorias/musica.php">Música</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
                         </ul>
@@ -83,13 +107,23 @@
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="form-group">
                             <label for="senha">Senha</label>
                             <input type="password" class="form-control" id="senha" name="senha" required>
                         </div>
                         <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" required>
+                            <label for ="confirma_senha" class="form-label"> Confirmar Senha</label>
+                            <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" required>
                         </div>
+                            <label for="perfil" class="form-label">Tipo de Perfil</label>
+                            <select class="form-control" id="perfil" name="perfil" required>
+                                <option value="aluno">Aluno</option>
+                                <option value="professor">Professor</option>
+                            </select>
+                            <br>
                         <button type="submit" class="btn btn-cadastrar btn-block">Cadastrar</button>
                     </form>
                     <p class="mt-3 text-center">Já tem uma conta? <a href="login.php">Faça login aqui</a>.</p>

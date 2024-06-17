@@ -63,7 +63,7 @@ unset($_SESSION['compra_sucesso']);
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">YourClass</a>
+            <a class="navbar-brand" href="../index.php">YourClass</a>
         </div>
     </nav>
 
@@ -74,7 +74,7 @@ unset($_SESSION['compra_sucesso']);
                 <i class="fas fa-check-circle confirmation-icon"></i>
                 <h1 class="card-title confirmation-title">Compra Concluída com Sucesso!</h1>
                 <p class="card-text confirmation-text">Obrigado por comprar o curso. Você receberá mais informações no seu email em breve.</p>
-                <a href="../indexCadastrado.html" class="btn btn-primary confirmation-button">Voltar para a Página Inicial</a>
+                <a href="../index.php" class="btn btn-primary confirmation-button">Voltar para a Página Inicial</a>
             </div>
         </div>
     </div>
