@@ -154,11 +154,12 @@ function renderLoginButton($loggedIn) {
       <div class="card-body">
         <div class="course-header">
           <h1 class="card-title">Python para Iniciantes</h1>
-          <span class="course-price">R$ 299,99</span>
+          <span class="course-price">R$ 59,99</span>
         </div>
         <a href="../categorias/programacao.php"><p class="course-category">Categoria: Programação</p></a>
         <p>Total de aluno: 150</p>
         <p>Nota do curso: 4,7</p>
+        <p>Nível do curso: 1</p>
         <div class="course-info">
           <h3>Descrição do Curso</h3>
           <p>Este curso é destinado a quem deseja iniciar na programação utilizando a linguagem Python. 

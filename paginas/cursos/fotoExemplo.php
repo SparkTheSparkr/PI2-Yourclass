@@ -133,11 +133,11 @@ function renderLoginButton($loggedIn) {
               Cursos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="categorias/programacao.php">Programação</a></li>
-              <li><a class="dropdown-item" href="categorias/fotografia.php">Fotografia</a></li>
-              <li><a class="dropdown-item" href="categorias/musica.php">Música</a></li>
+              <li><a class="dropdown-item" href="../categorias/programacao.php">Programação</a></li>
+              <li><a class="dropdown-item" href="../categorias/fotografia.php">Fotografia</a></li>
+              <li><a class="dropdown-item" href="../categorias/musica.php">Música</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
+              <li><a class="dropdown-item" href="../index.php#cursos">Mais cursos</a></li>
             </ul>
           </li>
         </ul>
@@ -154,11 +154,12 @@ function renderLoginButton($loggedIn) {
       <div class="card-body">
         <div class="course-header">
           <h1 class="card-title">Fotografia Básica</h1>
-          <span class="course-price">R$ 249,99</span>
+          <span class="course-price">R$ 39,99</span>
         </div>
         <a href="categorias/fotografia.php"><p class="course-category">Categoria: Fotografia</p></a>
         <p>Total de alunos: 120</p>
         <p>Nota do curso: 4,5</p>
+        <p>Nível do curso: 1</p>
         <div class="course-info">
           <h3>Descrição do Curso</h3>
           <p>Este curso é ideal para quem está começando no mundo da fotografia e deseja aprender as técnicas básicas para capturar imagens de qualidade. 

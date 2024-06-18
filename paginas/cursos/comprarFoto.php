@@ -120,7 +120,7 @@ function renderLoginButton($loggedIn) {
         <div class="course-header">
           <h1 class="card-title">Fotografia Básica</h1>
           <h2 class="card-subtitle mb-2 text-muted">Professor: Maria Souza</h2>
-          <span class="course-price">R$249,99</span>
+          <span class="course-price">R$39,99</span>
         </div>
         <form action="processar_compra.php" method="post">
           <div class="mb-3">

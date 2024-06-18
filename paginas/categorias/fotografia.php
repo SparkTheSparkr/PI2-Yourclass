@@ -102,7 +102,7 @@ function renderLoginButton($loggedIn) {
             <a class="nav-link" href="../sobrenos.php">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../usuarios/aluno.php">Perfil</a>
+            <a class="nav-link" href="../usuaios/aluno.php">Perfil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../placar.php">Placar</a>
@@ -154,6 +154,7 @@ function renderLoginButton($loggedIn) {
           <br><br><br><br><br>
           <p>Nota do curso: 4,5</p>
           <p>Total de alunos: 100</p>
+          <p>Nível do curso: 1</p>
         </div>
       </div>
     </div>
@@ -187,6 +188,7 @@ function renderLoginButton($loggedIn) {
           <br><br><br><br><br>
           <p>Nota do curso: 4,9</p>
           <p>Total de alunos: 80</p>
+          <p>Nível do curso: 4</p>
         </div>
       </div>
     </div>

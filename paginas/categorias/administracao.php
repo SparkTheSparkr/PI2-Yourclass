@@ -154,6 +154,7 @@ function renderLoginButton($loggedIn) {
           <br><br><br><br><br>
           <p>Nota do curso: 4,8</p>
           <p>Total de alunos: 90</p>
+          <p>Nível do curso: 4</p>
         </div>
       </div>
     </div>
@@ -187,6 +188,7 @@ function renderLoginButton($loggedIn) {
           <br><br><br><br><br>
           <p>Nota do curso: 4,7</p>
           <p>Total de alunos: 110</p>
+          <p>Nível do curso: 2</p>
         </div>
       </div>
     </div>
@@ -220,6 +222,7 @@ function renderLoginButton($loggedIn) {
           <br><br><br><br><br>
           <p>Nota do curso: 4,9</p>
           <p>Total de alunos: 80</p>
+          <p>Nível do curso: 3</p>
         </div>
       </div>
     </div>

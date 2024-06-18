@@ -120,7 +120,7 @@ function renderLoginButton($loggedIn) {
         <div class="course-header">
           <h1 class="card-title">PYTHON PARA INICIANTES</h1>
           <h2 class="card-subtitle mb-2 text-muted">Professor: João Silva</h2>
-          <span class="course-price">R$299,00</span>
+          <span class="course-price">R$59,99</span>
         </div>
         <form action="processar_compra.php" method="post">
           <div class="mb-3">

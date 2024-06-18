@@ -132,14 +132,21 @@ function renderLoginButton($loggedIn) {
     <div class="container containerCursos">
       <div class="row">		
             
-        <div class="col-md-3 col-sm-12 mb-3">
-      <div class="card cartao">
+      <div class="col-md-3 col-sm-12 mb-3">
+      <div class="card">
         <img src="../../assets/images/programacao/python.jpeg" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">PYTHON PARA INICIANTES</h5>
-          <p class="card-text">Programação</p>
+          <h5 class="card-title">Programação</h5>
+          <p class="card-text">CURSO COMPLETO DE PYTHON</p>
           <br>
-          <a href="../cursos/progExemplo.php" class="btn btn-danger">Visitar</a>
+          <div class="row">
+            <div class="col-md-3 col-sm-12 mb-3">
+              <a href="../cursos/progExemplo.php" class="btn btn-danger">Visitar</a>
+            </div>
+            <div class="col-md-9 col-sm-12 mb-9" style="text-align: end;">
+              <p>Nível do curso: 1
+            </div>
+          </div>
         </div>
       </div>
         </div>
@@ -151,10 +158,17 @@ function renderLoginButton($loggedIn) {
           <h5 class="card-title">Culinária</h5>
           <p class="card-text">APRENDA MAIS DE 100 RECEITAS</p>
           <br>
-          <a href="#" class="btn btn-danger">Visitar</a>
+          <div class="row">
+            <div class="col-md-3 col-sm-12 mb-3">
+              <a href="#" class="btn btn-danger">Visitar</a>
+            </div>
+            <div class="col-md-9 col-sm-12 mb-9" style="text-align: end;">
+              <p>Nível do curso: 3
+            </div>
+          </div>
         </div>
       </div>
-        </div>        	       	        	
+        </div>     	       	        	
 
       </div>
   </div>

@@ -154,11 +154,12 @@ function renderLoginButton($loggedIn) {
       <div class="card-body">
         <div class="course-header">
           <h1 class="card-title">Administração Pública</h1>
-          <span class="course-price">$200,00</span>
+          <span class="course-price">$115,00</span>
         </div>
         <a href="../categorias/administracao.php"><p class="course-category">Categoria: Administração</p></a>
-        <p>Total de aluno: 200</p>
-        <p>Nota do curso: 4,8</p>
+        <p>Total de aluno: 110</p>
+        <p>Nota do curso: 4,7</p>
+        <p>Nível do curso: 2</p>
         <div class="course-info">
           <h3>Descrição do Curso</h3>
           <p>Este curso aborda os princípios fundamentais da administração pública, proporcionando uma visão abrangente sobre as práticas e desafios enfrentados na gestão pública. 
