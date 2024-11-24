@@ -85,6 +85,9 @@
                             <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesquisar.php">Pesquisar</a>
+                    </li>
                 </ul>
             </div>
         </div>

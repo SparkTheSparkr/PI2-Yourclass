@@ -103,7 +103,7 @@ function renderLoginButton($loggedIn) {
             <a class="nav-link" href="../sobrenos.php">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../usuaios/aluno.php">Perfil</a>
+            <a class="nav-link" href="../usuarios/aluno.php">Perfil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../placar.php">Placar</a>
@@ -119,6 +119,9 @@ function renderLoginButton($loggedIn) {
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="../index.php#cursos">Mais cursos</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pesquisar.php">Pesquisar</a>
           </li>
         </ul>
         <?php renderLoginButton($loggedIn); ?>

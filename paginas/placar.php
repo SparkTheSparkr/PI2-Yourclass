@@ -106,6 +106,9 @@ $alunos = [
                             <li><a class="dropdown-item" href="#">Mais cursos</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+            <a class="nav-link" href="pesquisar.php">Pesquisar</a>
+          </li>
                 </ul>
                 <?php renderLoginButton($loggedIn); ?>
             </div>

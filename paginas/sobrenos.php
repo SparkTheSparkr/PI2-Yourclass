@@ -154,6 +154,9 @@ function renderLoginButton($loggedIn) {
               <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pesquisar.php">Pesquisar</a>
+          </li>
         </ul>
         <?php renderLoginButton($loggedIn); ?>
       </div>
@@ -179,16 +182,12 @@ function renderLoginButton($loggedIn) {
                 <h2 class="about-title">Nossa Equipe</h2>
                 <div class="row">
                         <ul class="team-members">
-                            <li class="team-member col-md-4">
+                            <li class="team-member col-md-6">
                                 <h3>Eduardo Cavalhieri Xavier</h3>
                                 <p>Desenvolvedor Geral & Líder do Projeto</p>
                             </li>
-                            <li class="team-member col-md-4">
+                            <li class="team-member col-md-6">
                                 <h3>Pedro Henrique Gonçalves</h3>
-                                <p>Desenvolvedor Geral & Líder do Projeto</p>
-                            </li>
-                            <li class="team-member col-md-4">
-                                <h3>Joyce Fernanda de Araujo</h3>
                                 <p>Desenvolvedor Geral & Líder do Projeto</p>
                             </li>
                         </ul>
