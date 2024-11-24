@@ -127,75 +127,59 @@ function renderLoginButton($loggedIn) {
   </nav>
     <!-- Fim NavBar -->
   <br><br>
-  
-  <!-- Curso: Programação para Iniciantes -->
-  <div class="cursos">
-    <div class="conteudo row">
-      <div class="col-4">
-        <img src="../../assets/images/index/programacao.jpeg" width="100%" height="95%" class="tamanho-imagem">
-      </div>
-      <div class="col-8 flex-centered row">
-        <div class="col-6">
-          <div class="course-header">
-            <p>PROGRAMAÇÃO PARA INICIANTES</p>
-          </div>
-          <p>Aprenda o básico de programação, desde de linguagem de marcação até lógica de programação</p>
-          <p>Backend: C, C# e Python</p>
-          <p>Frontend: HTML e CSS</p>
-          <br>
-          <a href="programacao_iniciantes.php" class="btn btn-primary">Visitar Curso</a>
-        </div>
-        <div class="col-1"></div>
-        <div class="col-5" style="text-align: end;">
-          <div class="row">
-            <div class="col-11"><p>Prof. João Silva</p></div>
-            <div class="col-1">
-              <a href="../usuarios/professor.php"><img src="../../assets/images/index/default.jpg" width="30px" height="30px"></a>
-            </div>
-          </div>
-          <br><br><br><br><br>
-          <p>Nota do curso: 4,8</p>
-          <p>Total de alunos: 120</p>
-          <p>Nível do curso: 1</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br><br>
-  
-  <!-- Curso: Python para Iniciantes -->
-  <div class="cursos">
-    <div class="conteudo row">
-      <div class="col-4">
-        <img src="../../assets/images/programacao/python.jpeg" width="100%" height="95%" class="tamanho-imagem">
-      </div>
-      <div class="col-8 flex-centered row">
-        <div class="col-6">
-          <div class="course-header">
-            <p>PYTHON PARA INICIANTES</p>
-          </div>
-          <p>Aprenda o básico de programação com Python, uma linguagem poderosa e versátil</p>
-          <p>Backend: Python</p>
-          <p>Frontend: HTML e CSS</p>
-          <br>
-          <a href="../cursos/progExemplo.php" class="btn btn-primary">Visitar Curso</a>
-        </div>
-        <div class="col-1"></div>
-        <div class="col-5" style="text-align: end;">
-          <div class="row">
-            <div class="col-11"><p>Prof. João Silva</p></div>
-            <div class="col-1">
-              <a href="../usuarios/professor.php"><img src="../../assets/images/index/default.jpg" width="30px" height="30px"></a>
-            </div>
-          </div>
-          <br><br><br><br><br>
-          <p>Nota do curso: 4,7</p>
-          <p>Total de alunos: 150</p>
-          <p>Nível do curso: 1</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php
+include('../../conexao.php');
+
+// Consulta para pegar os cursos
+$sql = "SELECT c.id, c.nome, c.descricao, c.imagem, c.nota, c.alunos, c.nivel, p.nome AS professor_nome, p.imagem_perfil, p.id AS professor_id
+        FROM cursos c 
+        LEFT JOIN curso_professor cp ON c.id = cp.curso_id
+        LEFT JOIN professores p ON cp.professor_id = p.id
+        WHERE c.categoria = 'Programação'
+        ";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Exibindo os cursos e informações dos professores
+        echo '<div class="cursos">
+                <div class="conteudo row">
+                    <div class="col-4">
+                        <img src="' . $row['imagem'] . '" width="100%" height="95%" class="tamanho-imagem">
+                    </div>
+                    <div class="col-8 flex-centered row">
+                        <div class="col-6">
+                            <div class="course-header">
+                                <p>' . $row['nome'] . '</p>
+                            </div>
+                            <p>' . $row['descricao'] . '</p>
+                            <br>
+                            <a href="../cursos/programacao.php?id=' . $row['id'] . '" class="btn btn-primary">Visitar Curso</a>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5" style="text-align: end;">
+                            <div class="row">
+                                <div class="col-11"><p>Prof. ' . $row['professor_nome'] . '</p></div>
+                                <div class="col-1">
+                                    <a href="../usuarios/professor.php?id='.$row['professor_id']. '"><img src="' . $row['imagem_perfil'] . '" width="30px" height="30px"></a>
+                                </div>
+                            </div>
+                            <br><br><br><br><br>
+                            <p>Nota do curso: ' . $row['nota'] . '</p>
+                            <p>Total de alunos: ' . $row['alunos'] . '</p>
+                            <p>Nível do curso: ' . $row['nivel'] . '</p>
+                        </div>
+                    </div>
+                </div>
+            </div>';
+    }
+} else {
+    echo "Nenhum curso encontrado!";
+}
+
+$conn->close();
+?>
 
 </body>
 </html>
