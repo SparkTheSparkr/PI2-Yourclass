@@ -25,7 +25,13 @@ function renderLoginButton($loggedIn)
 
 if (!empty($_GET['search'])) {
   $data = $_GET['search'];
-  $sql = "SELECT * FROM cursos WHERE nome LIKE '%data%' ORDER BY id DESC";
+  // Escapando o valor de pesquisa para evitar injeção SQL
+  $data = mysqli_real_escape_string($conn, $data);
+  // Alteração na consulta SQL para usar a variável corretamente
+  $sql = "SELECT * FROM cursos WHERE nome LIKE '%$data%' ORDER BY id DESC";
+} else {
+  // Caso não haja pesquisa, pegar todos os cursos
+  $sql = "SELECT * FROM cursos ORDER BY id DESC";
 }
 $result = $conn->query($sql);
 ?>
@@ -195,31 +201,37 @@ $result = $conn->query($sql);
           <th scope="col">Visitar</th>
         </tr>
       </thead>
-      <tbody>
-        <?php
-        while ($user_data = mysqli_fetch_assoc($result)) {
-          echo "<tr>";
-          echo "<td>" . $user_data['nome'] . "</td>";
-          echo "<td>
-            <a class='btn btn-sm btn-primary' href='cursos/$user_data[nome]' title='Visitar'>
-                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
-                    <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
-                </svg>
-                </a>
-                </td>";
-          echo "</tr>";
-        }
-        ?>
-      </tbody>
+<tbody>
+  <?php
+  while ($user_data = mysqli_fetch_assoc($result)) {
+    // Recuperando o ID do curso
+    $course_id = $user_data['id'];
+    $course_name = $user_data['nome'];
+    
+    echo "<tr>";
+    echo "<td>" . $course_name . "</td>";
+    echo "<td>
+      <!-- Alterando o link para redirecionar para a página do curso com o ID dinâmico -->
+      <a class='btn btn-sm btn-primary' href='cursos/programacao.php?id=$course_id' title='Visitar'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
+          <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
+        </svg>
+      </a>
+    </td>";
+    echo "</tr>";
+  }
+  ?>
+</tbody>
     </table>
   </div>
 </body>
 <script>
   var search = document.getElementById('pesquisar');
 
-  function searchData() {
-    window.location = 'pesquisar.php?search=' + search.value;
-  }
+function searchData() {
+  // Redireciona para a página com o parâmetro de pesquisa
+  window.location = 'pesquisar.php?search=' + encodeURIComponent(search.value);
+}
 </script>
 
 </html>
