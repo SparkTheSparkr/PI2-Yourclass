@@ -30,7 +30,8 @@ if ($curso_id > 0) {
     $query = "SELECT c.id, c.nome, c.descricao, c.imagem, c.nota, c.alunos, c.nivel, c.preco, c.categoria, p.nome AS professor_nome, p.imagem_perfil, p.id AS professor_id
     FROM cursos c 
     LEFT JOIN curso_professor cp ON c.id = cp.curso_id
-    LEFT JOIN professores p ON cp.professor_id = p.id";
+    LEFT JOIN professores p ON cp.professor_id = p.id
+    WHERE c.id = $curso_id";
 
     $result = mysqli_query($conn, $query);
 
@@ -194,7 +195,7 @@ if ($curso_id > 0) {
         <div class="professor-info">
           <h3>Sobre o Professor</h3>
           <a href="../usuarios/professor.php?id=<?php echo $curso['professor_id']; ?>" id="prof">
-            <p><strong><?php echo htmlspecialchars($curso['professor_nome']); ?></strong></p>
+            <p><strong><?php echo($curso['professor_nome']); ?></strong></p>
           </a>
           <div class="perfil">
             <img src="<?php echo $curso['imagem_perfil']; ?>" alt="Foto do Professor">

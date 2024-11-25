@@ -100,44 +100,52 @@ function renderLoginButton($loggedIn) {
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">YourClass</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sobrenos.php">Sobre nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="usuarios/aluno.php">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="placar.php">Placar</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              Cursos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="categorias/culinaria.php">Culinária</a></li>
-              <li><a class="dropdown-item" href="categorias/fotografia.php">Fotografia</a></li>
-              <li><a class="dropdown-item" href="categorias/musica.php">Música</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
+        <a class="navbar-brand" href="index.php">YourClass</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobrenos.php">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="usuarios/aluno.php">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="placar.php">Placar</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        Cursos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="categorias/culinaria.php">Culinária</a></li>
+                        <li><a class="dropdown-item" href="categorias/fotografia.php">Fotografia</a></li>
+                        <li><a class="dropdown-item" href="categorias/musica.php">Música</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#cursos">Mais cursos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pesquisar.php">Pesquisar</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pesquisar.php">Pesquisar</a>
-          </li>
-        </ul>
-        <?php renderLoginButton($loggedIn); ?>
-      </div>
+
+            <!-- Renderiza o botão de login/logout -->
+            <?php renderLoginButton($loggedIn); ?>
+
+            <!-- Adiciona o botão "Criar Novo Curso" apenas se o usuário estiver logado -->
+            <?php if ($loggedIn): ?>
+                <a href="cursos/criar.php" class="btn btn-primary ms-3">Criar Novo Curso</a>
+            <?php endif; ?>
+        </div>
     </div>
-  </nav>
+</nav>
+
     <!-- Fim NavBar -->
 
   <!-- Carousel -->
